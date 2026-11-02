@@ -1,0 +1,183 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\newfontfamily\headfont{Inter}[UprightFont=*-ExtraBold,BoldFont=*-ExtraBold,Extension=.otf,Path=/usr/share/fonts/opentype/inter/]
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{graphicx,booktabs,float,caption,array,xcolor,longtable}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage[round]{natbib}
+\usepackage{setspace}
+\setstretch{1.05}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\titleformat{\section}{\headfont\Large}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\headfont\large}{\thesubsection}{0.8em}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{pdftitle={The Wealth of Nations, Mapped},pdfauthor={Tristan Hotham}}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries The Wealth of Nations, Mapped\par}
+\vspace{0.4em}
+{\large National output, output per head and shares of the world economy\\on an interactive map, with world estimates from 10,000 BC\par}
+\vspace{1.2em}
+{\large Tristan Hotham\par}
+\vspace{0.3em}
+{\small Independent researcher\\
+ORCID: 0000-0003-4931-9349\\
+DOI: {{DOI_LINK}}\par}
+\vspace{0.8em}
+2026
+\end{center}
+
+\begin{quote}
+\small
+\begin{center}\textbf{Abstract}\end{center}
+I put the Maddison Project Database 2023 \citep{mpd2023} on an interactive world map with a timeline from AD 1 to {{meta.last}}, showing for each present-day territory its GDP, GDP per head, share of world GDP and growth, with a ranking of the largest economies, a series for every country and an explicit treatment of the years without estimates. The database holds {{data.estimates|int}} country-year estimates of GDP per head for {{data.countries|int}} units, but only {{data.pre1820|int}} of them fall before 1820, for {{data.pre1820_countries|int}} countries; I carry the series from {{meta.last_mpd}} to {{meta.last}} with IMF growth rates. In 1820 China and India produced {{china_india.1820|pc1}} of world output; their share fell to {{china_india.1973|pc1}} in 1973 and recovered to {{china_india.2024|pc1}} in {{meta.last}}, while Western Europe and its offshoots rose from {{west_share.1820|pc1}} to a peak of {{west_share.1913|pc1}} in 1913 and fell back to {{west_share.2024|pc1}}. The United States economy passed Britain's in {{overtake.usa_gbr_gdp.first}} and China's by {{overtake.usa_chn_gdp.first}}, and was passed by China in purchasing power terms in {{overtake.chn_usa_gdp.first}}. Japan's GDP per head grew {{takeoff.jpn.x_50_73|x1}}-fold between 1950 and 1973 and South Korea's {{takeoff.kor.x_60_last|x}}-fold between 1960 and {{meta.last}}. The ratio of the richest to the poorest country's GDP per head (countries of a million people or more) rose from {{gap.1820.ratio|f1}} in 1820 to {{gap.1950.ratio|f1}} in 1950 and {{gap.2024.ratio|f0}} in {{meta.last}}; the ratio of the 90th to the 10th percentile country rose from {{gap.1820.p90_p10|f1}} to a high near {{gap.2000.p90_p10|f0}} around 2000. Before AD 1 only world totals exist, and they rest largely on assumptions: world population in 3000 BC ranges from {{longrun.pop.-3000.lo|f1}} to {{longrun.pop.-3000.hi|f0}} million in HYDE 3.2.1, and De Long's world GDP per head barely doubles ({{longrun.pc_x_delong|x1}} times) between 10,000 BC and 1800, against {{longrun.pc_x_since_1820|x1}} times since 1820. All national values describe present-day territories, and coverage before 1950 is partial.
+
+\textbf{Keywords:} economic history; Maddison Project; GDP per capita; great divergence; historical national accounts; data visualisation; open data
+\end{quote}
+
+\section{Introduction}
+Angus Maddison's estimates of the size of the world's economies over two millennia \citep{maddison2001,maddison2007} are among the most used, and most argued over, datasets in economic history. Since his death in 2010 the Maddison Project has revised and extended them, replacing many of his own conjectures with new historical national accounts and dropping others; the 2023 release \citep{mpd2023} is the latest. The numbers are usually shown as line charts for a few countries or regions. This paper describes a different view: a world map with a slider, on which every country with an estimate in a given year is coloured, every country without one is hatched, and the largest economies are ranked beside the map. The interactive version is at \url{{{meta.page}}}.
+
+The aim is twofold. The map makes the familiar story of the last two centuries, the great divergence between Europe and Asia \citep{pomeranz2000} and the partial convergence since, visible in one place. It also makes the limits of the evidence visible: before 1820, and for much of Africa and Asia before 1950, most of the map is empty. Section~\ref{sec:data} describes the data and the extension to {{meta.last}}, section~\ref{sec:methods} the derived measures and the map, section~\ref{sec:results} the main findings, and section~\ref{sec:limits} the limitations.
+
+\section{Data}\label{sec:data}
+\textbf{Maddison Project Database 2023.} The database gives, for {{data.countries|int}} units, real GDP per head in 2011 international dollars (purchasing power parity) and population, from AD 1 to {{meta.last_mpd}} \citep{mpd2023}. The units are present-day countries, plus three former states (the USSR, Yugoslavia and Czechoslovakia) whose series run alongside those of their successors. Values describe territories within present-day borders: ``Germany'' in 1820 is the territory of modern Germany, ``India'' is the modern Republic of India. Table~\ref{tab:cov} shows how coverage grows. There are estimates of GDP per head for {{data.ad1_n|int}} countries in AD 1, all in or beside the Roman world and several sharing one regional figure from \citet{scheidel2009}; {{data.y1000_n|int}} in 1000; {{data.y1500_n|int}} in 1500; {{data.y1700_n|int}} in 1700; {{data.y1820_n|int}} in 1820; {{data.y1913_n|int}} in 1913; and {{data.y1950_n|int}} in 1950. Long annual series before 1820 exist for Britain, France, Spain, Sweden, the Netherlands, Poland, Germany and Portugal, colonial Mexico and Peru, and the Cape (South Africa from 1700); China, Japan and India have estimates at intervals \citep{broadberry2015,broadberry2018,bassino2019,broadberry2015india}. Figure~\ref{fig:cov} shows the number of countries with an estimate in every year.
+
+The database also gives world GDP per head and population at benchmark years ({{data.world_years.0}}, 1850, 1870, 1900, 1920, 1940, each decade from 1950 to 2010, and each year from 2015), computed by its authors from all available estimates; there is no world total before 1820 in this release.
+
+\textbf{The 2011 dollars and their meaning.} GDP per head is converted at 2011 purchasing power parities and extrapolated backwards with the volume growth of each country's own historical national accounts. Comparisons across countries in the distant past therefore rest on long chains of growth rates and on one set of relative prices, and differences of 10 to 20 per cent should not be read as meaningful.
+
+\textbf{Extension to {{meta.last}}.} The database ends in {{meta.last_mpd}}. I carried each series forward with the IMF World Economic Outlook of October 2025 \citep{weo2025}: GDP grows with the IMF's real GDP per head at PPP times population (or with real GDP growth where the per head series is missing), and population with the IMF's population. This covers {{data.ext_countries|int}} units; Cuba, North Korea and Syria, which the IMF does not cover, are held at {{meta.last_mpd}} in world totals and shown only to {{meta.last_mpd}}. For former states the successors' combined growth is used. For some countries the IMF's figures for {{meta.last}} are themselves estimates ({{data.ext_estimate_rows|int}} country-years); they are flagged on the map.
+
+\textbf{The very long run.} Before AD 1 there are no national or regional estimates. For the world as a whole I use the estimates of world GDP and GDP per head of \citet{delong1998} (his variant without the Nordhaus adjustment, closest to Maddison's concept) and world population from HYDE 3.2.1 \citep{hyde2017}, with its low and high range, and from \citet{mcevedy1978}. For AD 1, 1000, 1500, 1600 and 1700 I add Maddison's own regional estimates \citep{maddison2010} for {{longrun.n_regions|int}} regions, which the 2023 database no longer carries. All of these were taken from the transcription by \citet{roodman2020}. They are in 1990 dollars; I rescale them by a single factor ({{longrun.link|f2}}) so that Maddison's 2010 world GDP per head in 1820 equals the 2023 database's. Table~\ref{tab:lr} lists the values.
+
+{{TABLE_LR}}
+
+\textbf{Maps.} Present-day borders are Natural Earth 1:50m countries \citep{naturalearth}; {{data.countries|int}} Maddison units map onto them, with South Sudan drawn with Sudan (Maddison's ``Sudan (Former)'') and the territories of the USSR, Yugoslavia and Czechoslovakia dissolved into one shape until those states broke up (1991, 1991, 1992). Borders of the time come from the historical-basemaps project \citep{ourednik}, {{hist_n}} snapshots from AD 1 to 2010, simplified, drawn only as a faint dashed backdrop and used to name the state a clicked point lay in.
+
+{{TABLE_COV}}
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_coverage.png}
+\caption{Countries with their own estimate of GDP per head in each year, Maddison Project Database 2023 (former states counted until they broke up, their successors after). The time axis is uneven, as on the interactive map.}\label{fig:cov}\end{figure}
+
+\section{Methods}\label{sec:methods}
+\textbf{Total GDP.} GDP is GDP per head times population. Where a year has GDP per head but no population, population is interpolated log-linearly between the database's population estimates if they are at most {{meta.pop_gap}} years apart ({{data.pop_interp|int}} country-years); otherwise the year has GDP per head but no total.
+
+\textbf{World GDP and shares.} At the database's benchmark years world GDP is its world GDP per head times world population. Between benchmarks before 1950 it is interpolated log-linearly. From 1950 the yearly world total is the sum of countries (without double counting former states and their successors), scaled by the ratio of the benchmark world total to that sum, interpolated between benchmarks; the ratio lies between {{data.world_ratio_min}} and {{data.world_ratio_max}}, so the scaling is small. Shares of world GDP are a country's GDP over the world total in the same year. In 1820 the countries with estimates hold {{data.coverage.1820|pc1}} of the world's population (the rest is in the database's world total through its regional estimates); in 1870, {{data.coverage.1870|pc1}}; in 1950, {{data.coverage.1950|pc1}}.
+
+\textbf{Growth.} For each estimate of GDP per head, growth is the annual average change since the country's estimate closest to ten years earlier, if one exists between {{meta.growth_span.0}} and {{meta.growth_span.1}} years earlier.
+
+\textbf{Gaps and nearest estimates.} On the map a country with no estimate in the chosen year shows its nearest estimate up to {{meta.carry}} years away, dotted (ties go to the earlier year), and is hatched if there is none; readers can switch the filling off. Rankings at benchmark years in this paper use the same rule (so India's 1821 estimate stands for 1820). Overtaking years are judged only on years in which both countries have their own estimate.
+
+\textbf{Former states.} The map shows the USSR, Yugoslavia and Czechoslovakia whole until they broke up and their successors afterwards; world totals use the aggregate when it has an estimate and the successors otherwise.
+
+\section{Results}\label{sec:results}
+\subsection{Before the nations}
+Figure~\ref{fig:lr} shows world GDP per head and population from 10,000 BC. HYDE's central estimate of world population is {{longrun.pop.-10000.hyde|f1}} million in 10,000 BC, {{longrun.pop.-3000.hyde|f1}} million in 3000 BC and {{longrun.pop.1.hyde|f0}} million in AD 1; McEvedy and Jones give {{longrun.pop.-2000.mj|f0}} million for 2000 BC, about a third of HYDE's {{longrun.pop.-2000.hyde|f0}} million. De Long's world GDP per head rises from {{longrun.pc_delong.-10000|usd}} in 10,000 BC to {{longrun.pc_delong.1800|usd}} in 1800 (linked 2011 dollars), a factor of {{longrun.pc_x_delong|x1}}; it has since risen {{longrun.pc_x_since_1820|x1}} times. The level before AD 1 is close to assumption: De Long anchors it near subsistence and lets population carry most of the growth.
+
+Maddison's regional estimates (Figure~\ref{fig:reg}) give the Indian subcontinent {{longrun.regions.IND.1.share|pc1}} and China {{longrun.regions.CHN.1.share|pc1}} of world output in AD 1, and Western Europe, then mostly within the Roman Empire, {{longrun.regions.WEUR.1.share|pc1}}, falling to {{longrun.regions.WEUR.1000.share|pc1}} in 1000 and rising to {{longrun.regions.WEUR.1700.share|pc1}} in 1700. In AD 1, {{longrun.assumed_ad1|int}} of the {{longrun.n_regions|int}} regions have GDP per head of exactly 400, 425 or 450 (1990) dollars, Maddison's assumed values for economies near subsistence, so these shares mostly restate his population estimates. Where his 2010 figures overlap the 2023 database they can differ substantially: China's share in 1820 is {{longrun.regions.CHN.1820.share|pc1}} in his tables and {{share.CHN.1820|pc1}} in the 2023 data.
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_longrun.png}
+\caption{World GDP per head and population, 10,000 BC to {{meta.last}} (uneven time axis). Dashed lines join estimates that are far apart; the band is HYDE's low to high population range.}\label{fig:lr}\end{figure}
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_regions.png}
+\caption{Maddison's (2010) regional shares of world GDP in AD 1 and 1700.}\label{fig:reg}\end{figure}
+
+\subsection{The divergence and the return}
+Figure~\ref{fig:maps} shows each country's share of world GDP in 1820, 1913, 1950 and {{meta.last}}, and Figure~\ref{fig:share} the shares of the largest economies by year. In 1820 China produced {{share.CHN.1820|pc1}} of world output and India (1821) {{share.IND.1820|pc1}}, followed by the United Kingdom ({{share.GBR.1820|pc1}}), France ({{share.FRA.1820|pc1}}) and Germany ({{share.DEU.1820|pc1}}) (Table~\ref{tab:top}). Their size came from population: GDP per head was {{pc1820.CHN|usd}} in China and {{pc1820.IND|usd}} in India, against {{gap.1820.richest_pc|usd}} in the United Kingdom, the richest country of a million people or more.
+
+China's share fell to {{share.CHN.1913|pc1}} in 1913, {{share.CHN.1950|pc1}} in 1950 and its lowest, {{share.CHN.low.pct|pc1}}, in {{share.CHN.low.year}}; India's to {{share.IND.1950|pc1}} in 1950 and {{share.IND.low.pct|pc1}} in {{share.IND.low.year}}. Together they fell from {{china_india.1820|pc1}} to {{china_india.1973|pc1}} in 1973. Western Europe and the Western offshoots rose from {{west_share.1820|pc1}} in 1820 to {{west_share.1913|pc1}} in 1913, then declined to {{west_share.1973|pc1}} in 1973 and {{west_share.2024|pc1}} in {{meta.last}}, almost exactly the combined share of China and India ({{china_india.2024|pc1}}). China's share in {{meta.last}} is {{share.CHN.last.pct|pc1}} and India's {{share.IND.last.pct|pc1}}. Because China's estimates before 1950 are a few decades apart (Figure~\ref{fig:share}), the timing of its decline within the nineteenth century is not well determined.
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_maps.png}
+\caption{Share of world GDP at four dates on present-day borders. Hatched: no estimate within ten years; dotted: nearest estimate.}\label{fig:maps}\end{figure}
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_share.png}
+\caption{Share of world GDP, 1820 to {{meta.last}}. Lines join estimates up to 45 years apart; dots mark isolated estimates. The dashed line joins the combined share of China and India at benchmark years.}\label{fig:share}\end{figure}
+
+{{TABLE_TOP}}
+
+\subsection{Changes of leadership}
+The United States economy became larger than the United Kingdom's in {{overtake.usa_gbr_gdp.first}} (\$\,{{overtake.usa_gbr_gdp.usa_bn|int}} billion against \$\,{{overtake.usa_gbr_gdp.gbr_bn|int}} billion) and stayed larger in every later year. In GDP per head the United States first passed the United Kingdom in {{overtake.usa_gbr_pc.first}}, fell behind in some years up to 1898 and in 1933 and 1934, and has been ahead since {{overtake.usa_gbr_pc.for_good}}. The British share of world output peaked at {{share.GBR.peak.pct|pc1}} in {{share.GBR.peak.year}}; the American share at {{share.USA.peak.pct|pc1}} in {{share.USA.peak.year}}.
+
+China had the largest GDP in every year with comparable estimates up to 1870. There is no estimate for China between {{overtake.usa_chn_gdp.china_prev_estimate}} and {{overtake.usa_chn_gdp.first}}; in {{overtake.usa_chn_gdp.first}} the United States was larger. The United States remained the largest economy until {{overtake.chn_usa_gdp.first}}, when China passed it in these purchasing power figures, and China has been larger since (Figure~\ref{fig:lead}). Table~\ref{tab:over} lists these and other crossings.
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_lead.png}
+\caption{The largest economy in each year, using estimates within ten years.}\label{fig:lead}\end{figure}
+
+{{TABLE_OVER}}
+
+\subsection{Take-offs}
+Figure~\ref{fig:pc} shows GDP per head for six countries since 1870. Japan's was {{takeoff.jpn.1950|usd}} in 1950, {{takeoff.jpn.pct_gbr_1950|pc}} of the British level, and {{takeoff.jpn.1973|usd}} in 1973, {{takeoff.jpn.pct_gbr_1973|pc}} of it: a {{takeoff.jpn.x_50_73|x1}}-fold rise at {{takeoff.jpn.g_50_73|pc1}} a year. Japan first passed the United Kingdom in {{overtake.jpn_gbr_pc.first}}. South Korea's GDP per head was {{takeoff.kor.1950|usd}} in 1950 and {{takeoff.kor.1960|usd}} in 1960, {{takeoff.kor.pct_jpn_1960|pc}} of Japan's and below Ghana's ({{takeoff.kor.ghana_1960|usd}}); {{takeoff.kor.richer_1960|int}} of {{takeoff.kor.n_1960|int}} countries of a million people or more were richer. It grew at {{takeoff.kor.g_60_00|pc1}} a year from 1960 to 2000, passed Japan in {{overtake.kor_jpn_pc.first}} and the United Kingdom in {{overtake.kor_gbr_pc.first}}, and reached {{takeoff.kor.last|usd}} in {{meta.last}}, {{takeoff.kor.x_60_last|x}} times its 1960 level. China's GDP per head rose from {{takeoff.chn.1978|usd}} in 1978 to {{takeoff.chn.last|usd}} in {{meta.last}} ({{takeoff.chn.x_78_last|x1}} times, {{takeoff.chn.g_78_last|pc1}} a year).
+
+Table~\ref{tab:fast} ranks countries of ten million people or more by their best 25-year growth of GDP per head since 1950. The first two, Iraq from {{fastest.0.from}} and Angola from {{fastest.1.from}}, start from wartime collapses and are oil economies; the next three are South Korea, Japan and Taiwan, and China is eighth.
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_pc.png}
+\caption{GDP per head, 1870 to {{meta.last}}, 2011 international dollars, logarithmic scale.}\label{fig:pc}\end{figure}
+
+{{TABLE_FAST}}
+
+\subsection{The gap between rich and poor countries}
+Among countries of a million people or more with their own estimate, the richest had {{gap.1820.ratio|f1}} times the GDP per head of the poorest in 1820 ({{gap.1820.richest}} and {{gap.1820.poorest}}), {{gap.1870.ratio|f1}} in 1870, {{gap.1913.ratio|f1}} in 1913, {{gap.1950.ratio|f1}} in 1950, {{gap.2000.ratio|f1}} in 2000 and {{gap.2024.ratio|f1}} in {{meta.last}} ({{gap.2024.richest}} and the {{gap.2024.poorest}}) (Table~\ref{tab:gap}, Figure~\ref{fig:gap}). Because the maximum is often a small oil exporter, the ratio of the 90th to the 10th percentile is a steadier measure: {{gap.1820.p90_p10|f1}} in 1820, {{gap.1913.p90_p10|f1}} in 1913, {{gap.1950.p90_p10|f1}} in 1950, {{gap.2000.p90_p10|f1}} in 2000 and {{gap.2024.p90_p10|f1}} in {{meta.last}}. Coverage changes are part of this: the number of such countries with estimates rises from {{gap.1820.n}} in 1820 to {{gap.2024.n}} in {{meta.last}}, and the poorest are least likely to have early estimates, which biases early ratios down. The jump in 1950 in Figure~\ref{fig:gap} is mostly this effect.
+
+Before 1820 the comparisons rest on very few countries. Among those with estimates, the Netherlands was the richest in 1600 and 1700 ({{top_pc.1700.0.gdppc|usd}} in 1700; Table~\ref{tab:pre}); the second in 1700 is ``South Africa'', which in this database means the Dutch settler colony at the Cape, a small part of today's territory.
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_gap.png}
+\caption{Ratio of the highest to the lowest, and of the 90th to the 10th percentile, GDP per head among countries of a million people or more with their own estimate (years with at least 20 such countries).}\label{fig:gap}\end{figure}
+
+{{TABLE_GAP}}
+
+{{TABLE_PRE}}
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_pcmap.png}
+\caption{GDP per head in {{meta.last}} ({{meta.last_mpd}} values carried forward with IMF growth).}\label{fig:pcmap}\end{figure}
+
+\section{Limitations}\label{sec:limits}
+The figures are estimates built on very different evidence. Before AD 1 the world series are reconstructions that assume output per head near subsistence and infer population from archaeology and carrying capacity; the two population series used here differ by a factor of two to three in the third millennium BC, and HYDE's own range is wider still. Before 1820, and for much of Africa, the Middle East and Asia before 1950, they rest on wages, prices, harvest and tax records, and on assumptions about population; for AD 1 several countries share a single regional value. Purchasing power comparisons across two centuries depend on one set of 2011 prices and on the volume growth of each country's own accounts, so levels in the distant past carry wide margins. GDP measures market production, not well-being, and says nothing about its distribution within countries.
+
+Present-day borders are a choice of the database, not of history: the colours describe modern territories, and the borders of the time are only a backdrop. Former states are shown whole until they broke up, but their successors' own series exist for earlier years and appear in the country charts. World totals before 1950 depend on the database's regional estimates for countries without their own series, and shares between benchmark years use an interpolated total. The extension to {{meta.last}} uses another institution's growth rates on a different PPP basis (ICP 2021), and some of the IMF's latest figures are estimates. The ``nearest estimate'' filling on the map can make a sparse record look fuller than it is; it can be switched off. Finally, releases of the database revise past values, sometimes by large amounts, and all results should be read as describing the 2023 release.
+
+\section{Conclusion}
+On one map, two centuries of the world economy show a clear arc: dominance by the populous economies of Asia, a long Western ascendancy that peaked before the First World War, and a return of China and India to a combined third of world output, achieved through some of the fastest sustained growth ever recorded. The same map shows how little of the earlier past the evidence covers. The data, code and interactive version are published so the numbers can be checked and updated with each new release.
+
+\section*{Data and code availability}
+The interactive version is at \url{{{meta.page}}}. Data and code are at \url{{{meta.repo}}} and archived with this paper at {{DOI_LINK}}. Derived data are released under CC BY 4.0 (the Maddison Project Database is CC BY 4.0) and code under the MIT licence; the simplified historical borders keep the GPL-3.0 licence of historical-basemaps.
+
+\section*{AI statement}
+I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.
+
+\appendix
+\section{Sources of the series shown}
+The Maddison Project asks that the original studies be cited when fewer than twelve countries are shown. Table~\ref{tab:src} lists, from the database's own sources sheet, the main sources of the long series for the countries drawn individually in the figures.
+
+{{TABLE_SRC}}
+
+\begin{thebibliography}{20}
+\bibitem[Bassino et~al.(2019)]{bassino2019} Bassino, J.-P., Broadberry, S., Fukao, K., Gupta, B. and Takashima, M. (2019) Japan and the great divergence, 730 to 1874. \textit{Explorations in Economic History}, 72, 1 to 22.
+\bibitem[Bolt and van Zanden(2024)]{mpd2023} Bolt, J. and van Zanden, J. L. (2024) Maddison style estimates of the evolution of the world economy: a new 2023 update. \textit{Journal of Economic Surveys}. Data: Maddison Project Database, version 2023, DataverseNL, \url{https://doi.org/10.34894/INZBF2}. CC BY 4.0.
+\bibitem[Broadberry et~al.(2015a)]{broadberry2015} Broadberry, S., Campbell, B. M. S., Klein, A., Overton, M. and van Leeuwen, B. (2015) \textit{British Economic Growth, 1270 to 1870}. Cambridge University Press.
+\bibitem[Broadberry et~al.(2015b)]{broadberry2015india} Broadberry, S., Custodis, J. and Gupta, B. (2015) India and the great divergence: an Anglo-Indian comparison of GDP per capita, 1600 to 1871. \textit{Explorations in Economic History}, 55, 58 to 75.
+\bibitem[Broadberry et~al.(2018)]{broadberry2018} Broadberry, S., Guan, H. and Li, D. D. (2018) China, Europe and the great divergence: a study in historical national accounting, 980 to 1850. \textit{Journal of Economic History}, 78(4), 955 to 1000.
+\bibitem[IMF(2025)]{weo2025} International Monetary Fund (2025) World Economic Outlook database, October 2025. \url{https://www.imf.org/en/Publications/WEO}
+\bibitem[De Long(1998)]{delong1998} De Long, J. B. (1998) Estimates of world GDP, one million B.C. to present. Working paper, University of California, Berkeley.
+\bibitem[Klein Goldewijk et~al.(2017)]{hyde2017} Klein Goldewijk, K., Beusen, A., Doelman, J. and Stehfest, E. (2017) Anthropogenic land use estimates for the Holocene: HYDE 3.2. \textit{Earth System Science Data}, 9, 927 to 953.
+\bibitem[Maddison(2010)]{maddison2010} Maddison, A. (2010) Historical Statistics of the World Economy: 1 to 2008 AD. Groningen Growth and Development Centre.
+\bibitem[McEvedy and Jones(1978)]{mcevedy1978} McEvedy, C. and Jones, R. (1978) \textit{Atlas of World Population History}. Penguin.
+\bibitem[Roodman(2020)]{roodman2020} Roodman, D. (2020) Modeling the human trajectory. Open Philanthropy. Data and code: \url{https://github.com/droodman/Modeling-Human-Trajectory}
+\bibitem[Maddison(2001)]{maddison2001} Maddison, A. (2001) \textit{The World Economy: A Millennial Perspective}. OECD Development Centre.
+\bibitem[Maddison(2007)]{maddison2007} Maddison, A. (2007) \textit{Contours of the World Economy, 1 to 2030 AD}. Oxford University Press.
+\bibitem[Natural Earth(2026)]{naturalearth} Natural Earth (2026) Admin 0 countries, 1:50m. Public domain. \url{https://www.naturalearthdata.com/}
+\bibitem[Ourednik(2026)]{ourednik} Ourednik, A. and contributors (2026) historical-basemaps: historical boundaries of world countries and cultural regions. GPL-3.0. \url{https://github.com/aourednik/historical-basemaps}
+\bibitem[Pomeranz(2000)]{pomeranz2000} Pomeranz, K. (2000) \textit{The Great Divergence: China, Europe, and the Making of the Modern World Economy}. Princeton University Press.
+\bibitem[Scheidel and Friesen(2009)]{scheidel2009} Scheidel, W. and Friesen, S. J. (2009) The size of the economy and the distribution of income in the Roman Empire. \textit{Journal of Roman Studies}, 99, 61 to 91.
+\end{thebibliography}
+\end{document}

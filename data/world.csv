@@ -1,0 +1,206 @@
+year,gdp_millions,pop_thousands,gdppc_2011usd,method,coverage_pop,countries
+1820,1175114.0,1042017.0,1127.7,Maddison world estimate,0.6547,55
+1821,1185925.0,1046619.0,1133.1,interpolated between Maddison world estimates,0.3549,16
+1822,1196836.0,1051242.0,1138.5,interpolated between Maddison world estimates,0.1554,15
+1823,1207847.0,1055884.0,1143.9,interpolated between Maddison world estimates,0.1564,15
+1824,1218960.0,1060548.0,1149.4,interpolated between Maddison world estimates,0.1574,15
+1825,1230175.0,1065232.0,1154.8,interpolated between Maddison world estimates,0.1584,15
+1826,1241493.0,1069936.0,1160.3,interpolated between Maddison world estimates,0.1593,15
+1827,1252915.0,1074662.0,1165.9,interpolated between Maddison world estimates,0.1602,15
+1828,1264442.0,1079408.0,1171.4,interpolated between Maddison world estimates,0.161,15
+1829,1276076.0,1084175.0,1177.0,interpolated between Maddison world estimates,0.1625,16
+1830,1287816.0,1088964.0,1182.6,interpolated between Maddison world estimates,0.5443,20
+1831,1299664.0,1093773.0,1188.2,interpolated between Maddison world estimates,0.365,18
+1832,1311622.0,1098604.0,1193.9,interpolated between Maddison world estimates,0.1661,17
+1833,1323689.0,1103456.0,1199.6,interpolated between Maddison world estimates,0.1692,18
+1834,1335868.0,1108329.0,1205.3,interpolated between Maddison world estimates,0.17,18
+1835,1348158.0,1113224.0,1211.0,interpolated between Maddison world estimates,0.171,18
+1836,1360562.0,1118141.0,1216.8,interpolated between Maddison world estimates,0.1719,18
+1837,1373079.0,1123079.0,1222.6,interpolated between Maddison world estimates,0.1728,18
+1838,1385712.0,1128040.0,1228.4,interpolated between Maddison world estimates,0.1737,18
+1839,1398461.0,1133022.0,1234.3,interpolated between Maddison world estimates,0.1746,18
+1840,1411327.0,1138026.0,1240.2,interpolated between Maddison world estimates,0.5424,21
+1841,1424312.0,1143052.0,1246.1,interpolated between Maddison world estimates,0.3756,19
+1842,1437416.0,1148100.0,1252.0,interpolated between Maddison world estimates,0.1777,18
+1843,1450641.0,1153171.0,1258.0,interpolated between Maddison world estimates,0.1787,18
+1844,1463987.0,1158264.0,1263.9,interpolated between Maddison world estimates,0.1806,19
+1845,1477457.0,1163379.0,1270.0,interpolated between Maddison world estimates,0.1807,18
+1846,1491050.0,1168518.0,1276.0,interpolated between Maddison world estimates,0.2138,21
+1847,1504768.0,1173678.0,1282.1,interpolated between Maddison world estimates,0.1858,19
+1848,1518612.0,1178862.0,1288.2,interpolated between Maddison world estimates,0.1859,19
+1849,1532584.0,1184068.0,1294.3,interpolated between Maddison world estimates,0.1864,19
+1850,1546684.0,1189298.0,1300.5,Maddison world estimate,0.7916,35
+1851,1565230.0,1193304.0,1311.7,interpolated between Maddison world estimates,0.3912,21
+1852,1583998.0,1197324.0,1322.9,interpolated between Maddison world estimates,0.1943,20
+1853,1602990.0,1201357.0,1334.3,interpolated between Maddison world estimates,0.1957,20
+1854,1622211.0,1205404.0,1345.8,interpolated between Maddison world estimates,0.1969,20
+1855,1641662.0,1209464.0,1357.3,interpolated between Maddison world estimates,0.2014,21
+1856,1661346.0,1213538.0,1369.0,interpolated between Maddison world estimates,0.1996,20
+1857,1681266.0,1217626.0,1380.8,interpolated between Maddison world estimates,0.201,20
+1858,1701426.0,1221728.0,1392.6,interpolated between Maddison world estimates,0.2024,20
+1859,1721826.0,1225843.0,1404.6,interpolated between Maddison world estimates,0.2038,20
+1860,1742472.0,1229972.0,1416.7,interpolated between Maddison world estimates,0.2891,30
+1861,1763365.0,1234116.0,1428.8,interpolated between Maddison world estimates,0.4763,24
+1862,1784508.0,1238273.0,1441.1,interpolated between Maddison world estimates,0.2844,24
+1863,1805905.0,1242444.0,1453.5,interpolated between Maddison world estimates,0.2854,23
+1864,1827559.0,1246629.0,1466.0,interpolated between Maddison world estimates,0.2874,23
+1865,1849472.0,1250828.0,1478.6,interpolated between Maddison world estimates,0.2928,24
+1866,1871648.0,1255042.0,1491.3,interpolated between Maddison world estimates,0.2946,24
+1867,1894090.0,1259269.0,1504.1,interpolated between Maddison world estimates,0.2964,24
+1868,1916801.0,1263511.0,1517.0,interpolated between Maddison world estimates,0.298,24
+1869,1939784.0,1267768.0,1530.1,interpolated between Maddison world estimates,0.3002,24
+1870,1963043.0,1272038.0,1543.2,Maddison world estimate,0.9321,67
+1871,2001319.0,1280351.0,1563.1,interpolated between Maddison world estimates,0.3161,30
+1872,2040342.0,1288719.0,1583.2,interpolated between Maddison world estimates,0.3172,30
+1873,2080126.0,1297141.0,1603.6,interpolated between Maddison world estimates,0.3186,30
+1874,2120685.0,1305618.0,1624.3,interpolated between Maddison world estimates,0.3471,31
+1875,2162036.0,1314150.0,1645.2,interpolated between Maddison world estimates,0.3233,31
+1876,2204192.0,1322739.0,1666.4,interpolated between Maddison world estimates,0.325,31
+1877,2247171.0,1331383.0,1687.8,interpolated between Maddison world estimates,0.3267,31
+1878,2290987.0,1340084.0,1709.6,interpolated between Maddison world estimates,0.3283,31
+1879,2335658.0,1348842.0,1731.6,interpolated between Maddison world estimates,0.3301,31
+1880,2381200.0,1357657.0,1753.9,interpolated between Maddison world estimates,0.3328,33
+1881,2427630.0,1366529.0,1776.5,interpolated between Maddison world estimates,0.3342,32
+1882,2474965.0,1375460.0,1799.4,interpolated between Maddison world estimates,0.3349,31
+1883,2523223.0,1384449.0,1822.5,interpolated between Maddison world estimates,0.3365,31
+1884,2572422.0,1393497.0,1846.0,interpolated between Maddison world estimates,0.529,32
+1885,2622581.0,1402604.0,1869.8,interpolated between Maddison world estimates,0.5584,33
+1886,2673717.0,1411770.0,1893.9,interpolated between Maddison world estimates,0.5603,33
+1887,2725851.0,1420996.0,1918.3,interpolated between Maddison world estimates,0.8271,34
+1888,2779001.0,1430283.0,1943.0,interpolated between Maddison world estimates,0.5643,33
+1889,2833187.0,1439630.0,1968.0,interpolated between Maddison world estimates,0.5665,33
+1890,2888430.0,1449039.0,1993.3,interpolated between Maddison world estimates,0.8654,43
+1891,2944750.0,1458508.0,2019.0,interpolated between Maddison world estimates,0.5703,34
+1892,3002169.0,1468040.0,2045.0,interpolated between Maddison world estimates,0.5744,36
+1893,3060707.0,1477634.0,2071.4,interpolated between Maddison world estimates,0.5716,34
+1894,3120386.0,1487291.0,2098.0,interpolated between Maddison world estimates,0.5725,34
+1895,3181229.0,1497011.0,2125.1,interpolated between Maddison world estimates,0.5818,35
+1896,3243258.0,1506794.0,2152.4,interpolated between Maddison world estimates,0.5828,35
+1897,3306497.0,1516641.0,2180.1,interpolated between Maddison world estimates,0.5841,35
+1898,3370969.0,1526553.0,2208.2,interpolated between Maddison world estimates,0.5853,35
+1899,3436698.0,1536529.0,2236.7,interpolated between Maddison world estimates,0.5891,36
+1900,3503708.0,1546571.0,2265.5,Maddison world estimate,0.8694,44
+1901,3560215.0,1564001.0,2276.3,interpolated between Maddison world estimates,0.5825,39
+1902,3617632.0,1581628.0,2287.3,interpolated between Maddison world estimates,0.5818,40
+1903,3675976.0,1599454.0,2298.3,interpolated between Maddison world estimates,0.5818,40
+1904,3735260.0,1617480.0,2309.3,interpolated between Maddison world estimates,0.5819,40
+1905,3795501.0,1635710.0,2320.4,interpolated between Maddison world estimates,0.5845,41
+1906,3856713.0,1654145.0,2331.5,interpolated between Maddison world estimates,0.5889,42
+1907,3918913.0,1672788.0,2342.7,interpolated between Maddison world estimates,0.582,41
+1908,3982115.0,1691641.0,2354.0,interpolated between Maddison world estimates,0.5822,41
+1909,4046337.0,1710706.0,2365.3,interpolated between Maddison world estimates,0.5823,41
+1910,4111595.0,1729986.0,2376.7,interpolated between Maddison world estimates,0.6204,47
+1911,4177905.0,1749484.0,2388.1,interpolated between Maddison world estimates,0.8418,45
+1912,4245284.0,1769201.0,2399.5,interpolated between Maddison world estimates,0.5867,42
+1913,4313750.0,1789141.0,2411.1,interpolated between Maddison world estimates,0.9298,68
+1914,4383321.0,1809305.0,2422.7,interpolated between Maddison world estimates,0.5834,42
+1915,4454013.0,1829697.0,2434.3,interpolated between Maddison world estimates,0.5795,42
+1916,4525846.0,1850318.0,2446.0,interpolated between Maddison world estimates,0.5822,43
+1917,4598836.0,1871172.0,2457.7,interpolated between Maddison world estimates,0.571,42
+1918,4673005.0,1892261.0,2469.5,interpolated between Maddison world estimates,0.5733,43
+1919,4748369.0,1913587.0,2481.4,interpolated between Maddison world estimates,0.5587,42
+1920,4824948.0,1935154.0,2493.3,Maddison world estimate,0.5903,52
+1921,4937331.0,1949377.0,2532.8,interpolated between Maddison world estimates,0.5806,52
+1922,5052332.0,1963705.0,2572.9,interpolated between Maddison world estimates,0.5723,50
+1923,5170011.0,1978138.0,2613.6,interpolated between Maddison world estimates,0.5815,51
+1924,5290432.0,1992678.0,2654.9,interpolated between Maddison world estimates,0.5914,53
+1925,5413657.0,2007324.0,2697.0,interpolated between Maddison world estimates,0.5951,54
+1926,5539752.0,2022078.0,2739.6,interpolated between Maddison world estimates,0.6049,54
+1927,5668784.0,2036940.0,2783.0,interpolated between Maddison world estimates,0.6011,53
+1928,5800822.0,2051911.0,2827.0,interpolated between Maddison world estimates,0.6041,53
+1929,5935935.0,2066993.0,2871.8,interpolated between Maddison world estimates,0.8626,58
+1930,6074195.0,2082185.0,2917.2,interpolated between Maddison world estimates,0.8574,55
+1931,6215676.0,2097489.0,2963.4,interpolated between Maddison world estimates,0.8672,56
+1932,6360452.0,2112906.0,3010.3,interpolated between Maddison world estimates,0.8624,55
+1933,6508600.0,2128436.0,3057.9,interpolated between Maddison world estimates,0.8649,56
+1934,6660199.0,2144080.0,3106.3,interpolated between Maddison world estimates,0.8661,55
+1935,6815329.0,2159839.0,3155.5,interpolated between Maddison world estimates,0.8681,55
+1936,6974072.0,2175713.0,3205.4,interpolated between Maddison world estimates,0.8773,56
+1937,7136512.0,2191705.0,3256.1,interpolated between Maddison world estimates,0.8729,55
+1938,7302737.0,2207814.0,3307.7,interpolated between Maddison world estimates,0.884,57
+1939,7472832.0,2224041.0,3360.0,interpolated between Maddison world estimates,0.6271,53
+1940,7646890.0,2240388.0,3413.2,Maddison world estimate,0.6225,51
+1941,7724696.0,2266730.0,3407.9,interpolated between Maddison world estimates,0.5241,48
+1942,7803293.0,2293383.0,3402.5,interpolated between Maddison world estimates,0.4908,48
+1943,7882689.0,2320348.0,3397.2,interpolated between Maddison world estimates,0.4835,46
+1944,7962894.0,2347631.0,3391.9,interpolated between Maddison world estimates,0.4752,44
+1945,8043914.0,2375234.0,3386.6,interpolated between Maddison world estimates,0.4744,45
+1946,8125759.0,2403162.0,3381.3,interpolated between Maddison world estimates,0.5632,49
+1947,8208437.0,2431418.0,3376.0,interpolated between Maddison world estimates,0.5421,51
+1948,8291956.0,2460007.0,3370.7,interpolated between Maddison world estimates,0.5606,53
+1949,8376325.0,2488931.0,3365.4,interpolated between Maddison world estimates,0.5952,54
+1950,8461552.0,2518196.0,3360.2,Maddison world estimate,0.9962,145
+1951,9011123.0,2562333.0,3516.8,sum of countries scaled to Maddison's world estimate,0.9963,145
+1952,9440731.0,2608719.0,3618.9,sum of countries scaled to Maddison's world estimate,0.9964,145
+1953,9964634.0,2656809.0,3750.6,sum of countries scaled to Maddison's world estimate,0.9964,145
+1954,10232048.0,2707576.0,3779.0,sum of countries scaled to Maddison's world estimate,0.9965,145
+1955,10910936.0,2759233.0,3954.3,sum of countries scaled to Maddison's world estimate,0.9965,145
+1956,11426114.0,2812158.0,4063.1,sum of countries scaled to Maddison's world estimate,0.9966,145
+1957,11834940.0,2869066.0,4125.0,sum of countries scaled to Maddison's world estimate,0.9966,145
+1958,12147345.0,2927823.0,4148.9,sum of countries scaled to Maddison's world estimate,0.9967,145
+1959,12682564.0,2983906.0,4250.3,sum of countries scaled to Maddison's world estimate,0.9968,145
+1960,13338077.0,3028866.0,4403.7,Maddison world estimate,0.9968,145
+1961,13808804.0,3069210.0,4499.1,sum of countries scaled to Maddison's world estimate,0.9968,145
+1962,14502121.0,3122518.0,4644.4,sum of countries scaled to Maddison's world estimate,0.9967,145
+1963,15165332.0,3187765.0,4757.4,sum of countries scaled to Maddison's world estimate,0.9967,145
+1964,16286061.0,3252593.0,5007.1,sum of countries scaled to Maddison's world estimate,0.9967,145
+1965,17148775.0,3318931.0,5167.0,sum of countries scaled to Maddison's world estimate,0.9966,145
+1966,18037248.0,3387768.0,5324.2,sum of countries scaled to Maddison's world estimate,0.9966,145
+1967,18731681.0,3456561.0,5419.2,sum of countries scaled to Maddison's world estimate,0.9965,145
+1968,19755395.0,3527667.0,5600.1,sum of countries scaled to Maddison's world estimate,0.9965,145
+1969,20863751.0,3599962.0,5795.5,sum of countries scaled to Maddison's world estimate,0.9965,145
+1970,21941934.0,3674961.0,5970.7,Maddison world estimate,0.9964,145
+1971,22850756.0,3753050.0,6088.6,sum of countries scaled to Maddison's world estimate,0.9964,145
+1972,23930819.0,3829273.0,6249.4,sum of countries scaled to Maddison's world estimate,0.9964,145
+1973,25523544.0,3905082.0,6536.0,sum of countries scaled to Maddison's world estimate,0.9964,145
+1974,26120448.0,3979567.0,6563.6,sum of countries scaled to Maddison's world estimate,0.9964,145
+1975,26534308.0,4052237.0,6548.1,sum of countries scaled to Maddison's world estimate,0.9964,145
+1976,27777942.0,4122650.0,6737.9,sum of countries scaled to Maddison's world estimate,0.9964,145
+1977,28905001.0,4194442.0,6891.3,sum of countries scaled to Maddison's world estimate,0.9964,145
+1978,30209213.0,4266683.0,7080.3,sum of countries scaled to Maddison's world estimate,0.9964,145
+1979,31304101.0,4342476.0,7208.8,sum of countries scaled to Maddison's world estimate,0.9964,145
+1980,31982617.0,4417980.0,7239.2,Maddison world estimate,0.9964,145
+1981,32550766.0,4490954.0,7248.1,sum of countries scaled to Maddison's world estimate,0.9968,145
+1982,32950598.0,4560975.0,7224.5,sum of countries scaled to Maddison's world estimate,0.9972,145
+1983,33870381.0,4647236.0,7288.3,sum of countries scaled to Maddison's world estimate,0.9976,145
+1984,35401865.0,4724695.0,7492.9,sum of countries scaled to Maddison's world estimate,0.998,145
+1985,36595509.0,4803152.0,7619.1,sum of countries scaled to Maddison's world estimate,0.9984,145
+1986,37889471.0,4883595.0,7758.5,sum of countries scaled to Maddison's world estimate,0.9988,145
+1987,39305111.0,4966447.0,7914.1,sum of countries scaled to Maddison's world estimate,0.9992,145
+1988,40945996.0,5050374.0,8107.5,sum of countries scaled to Maddison's world estimate,0.9996,145
+1989,42226259.0,5134900.0,8223.4,sum of countries scaled to Maddison's world estimate,1.0,145
+1990,43033604.0,5240990.0,8211.0,Maddison world estimate,1.0004,146
+1991,43722247.0,5325395.0,8210.1,sum of countries scaled to Maddison's world estimate,1.0004,145
+1992,44742721.0,5410489.0,8269.6,sum of countries scaled to Maddison's world estimate,1.0004,145
+1993,45915068.0,5489579.0,8364.0,sum of countries scaled to Maddison's world estimate,1.0003,146
+1994,47538043.0,5569514.0,8535.4,sum of countries scaled to Maddison's world estimate,1.0003,146
+1995,49400856.0,5650656.0,8742.5,sum of countries scaled to Maddison's world estimate,1.0003,146
+1996,51523378.0,5731857.0,8989.0,sum of countries scaled to Maddison's world estimate,1.0003,146
+1997,53606294.0,5812104.0,9223.2,sum of countries scaled to Maddison's world estimate,1.0003,146
+1998,54925818.0,5891016.0,9323.7,sum of countries scaled to Maddison's world estimate,1.0003,146
+1999,56974872.0,5969357.0,9544.6,sum of countries scaled to Maddison's world estimate,1.0003,146
+2000,59897673.0,6047911.0,9903.9,Maddison world estimate,1.0003,146
+2001,61651013.0,6126170.0,10063.5,sum of countries scaled to Maddison's world estimate,1.0003,146
+2002,63752115.0,6204882.0,10274.5,sum of countries scaled to Maddison's world estimate,1.0003,146
+2003,66352766.0,6283324.0,10560.1,sum of countries scaled to Maddison's world estimate,1.0003,146
+2004,70054771.0,6361707.0,11011.9,sum of countries scaled to Maddison's world estimate,1.0003,146
+2005,73675502.0,6440177.0,11440.0,sum of countries scaled to Maddison's world estimate,1.0003,146
+2006,77889809.0,6519593.0,11947.0,sum of countries scaled to Maddison's world estimate,1.0003,146
+2007,82188646.0,6600436.0,12452.0,sum of countries scaled to Maddison's world estimate,1.0003,146
+2008,84710059.0,6682412.0,12676.6,sum of countries scaled to Maddison's world estimate,1.0003,146
+2009,84822522.0,6763349.0,12541.5,sum of countries scaled to Maddison's world estimate,1.0003,146
+2010,89807706.0,6844270.0,13121.6,Maddison world estimate,1.0003,146
+2011,93565929.0,6926435.0,13508.5,sum of countries scaled to Maddison's world estimate,1.0003,146
+2012,96728582.0,7010589.0,13797.5,sum of countries scaled to Maddison's world estimate,1.0003,146
+2013,99934065.0,7093644.0,14087.8,sum of countries scaled to Maddison's world estimate,1.0003,146
+2014,103445302.0,7181305.0,14404.8,sum of countries scaled to Maddison's world estimate,1.0003,146
+2015,106871829.0,7263546.0,14713.5,Maddison world estimate,1.0003,146
+2016,110407204.0,7346251.0,15029.1,Maddison world estimate,1.0003,146
+2017,114529587.0,7429108.0,15416.3,Maddison world estimate,1.0002,146
+2018,118765819.0,7509766.0,15814.8,Maddison world estimate,1.0002,146
+2019,122149369.0,7590949.0,16091.4,Maddison world estimate,1.0002,146
+2020,118590022.0,7670176.0,15461.2,Maddison world estimate,1.0002,146
+2021,126004800.0,7738435.0,16283.0,Maddison world estimate,1.0002,146
+2022,130112562.0,7802034.0,16676.7,Maddison world estimate,1.0002,146
+2023,134713374.0,7875427.0,17105.5,sum of countries scaled to Maddison's world estimate (IMF growth after 2022),1.0002,146
+2024,139238268.0,7951654.0,17510.6,sum of countries scaled to Maddison's world estimate (IMF growth after 2022),1.0002,146
