@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite it as below."
+title: "The Wealth of Nations, Mapped: National Output, Output per Head and Shares of the World Economy on an Interactive Map, with World Estimates from 10,000 BC"
+type: dataset
+authors:
+  - family-names: Hotham
+    given-names: Tristan
+    orcid: "https://orcid.org/0000-0003-4931-9349"
+    affiliation: "Independent researcher"
+doi: "10.5281/zenodo.23899403"
+url: "https://maps.tristanhotham.com/gdp-through-time/"
+repository-code: "https://github.com/Tristan-Hotham/gdp-through-time"
+license: CC-BY-4.0
+keywords:
+  - "economic history"
+  - "Maddison Project"
+  - "GDP per capita"
+  - "great divergence"
+  - "historical national accounts"
+  - "world population"
+  - "open data"
+  - "maps"
